@@ -133,7 +133,7 @@ const projects = [
 
 projects.forEach(ensureProjectVisual);
 
-const path = window.location.pathname;
+const path = window.location.pathname.replace(/\/+$/, "") || "/";
 const knownPaths = ["/", "/projects", "/about"];
 
 if (!knownPaths.includes(path)) {
