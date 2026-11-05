@@ -136,6 +136,9 @@ projects.forEach(ensureProjectVisual);
 const path = window.location.pathname;
 const knownPaths = ["/", "/projects", "/about"];
 
+if (!knownPaths.includes(path)) {
+  window.location.replace("/404.html");
+}
 const page =
   path === "/projects" ? "projects" : path === "/about" ? "about" : "home";
 const arrow = '<span aria-hidden="true">↗</span>';
