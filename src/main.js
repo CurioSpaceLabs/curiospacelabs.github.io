@@ -141,6 +141,8 @@ if (!knownPaths.includes(path)) {
 }
 const page =
   path === "/projects" ? "projects" : path === "/about" ? "about" : "home";
+document.querySelector('link[rel="canonical"]').href =
+  `https://curiospacelabs.github.io${path === "/" ? "/" : path}`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const projectCard = (project, compact = false) => {
   const safeProject = ensureProjectVisual({ ...project });
