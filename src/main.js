@@ -267,7 +267,7 @@ const copy = {
       allProjects: "Lihat semua proyek",
       philosophy: "Filosofi kami",
       quote:
-        "Apa pun yang kamu lakukan, lakukanlah dengan segenap hatimu seperti untuk Tuhan, bukan untuk manusia.",
+        "Apa pun juga yang kamu perbuat, perbuatlah dengan segenap hatimu seperti untuk Tuhan dan bukan untuk manusia.",
       verse: "Kolose 3:23",
     },
     projects: {
