@@ -519,6 +519,49 @@ h1 span,
   font-size: 15px;
   line-height: 1.7;
 }
+.privacy-hero {
+  min-height: 0;
+  padding-bottom: 48px;
+}
+.privacy-document {
+  padding-top: 54px;
+  padding-bottom: 90px;
+  color: #c0c2b7;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.privacy-document h2 {
+  margin: 48px 0 18px;
+  color: var(--paper);
+  font: 400 27px/1.25 var(--serif);
+}
+.privacy-document h2:first-child {
+  margin-top: 0;
+}
+.privacy-document p {
+  max-width: 850px;
+  margin: 0 0 18px;
+}
+.privacy-document ul {
+  margin: 0 0 22px;
+  padding-left: 24px;
+}
+.privacy-document li + li {
+  margin-top: 7px;
+}
+.privacy-document strong {
+  color: var(--paper);
+}
+.privacy-document a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.privacy-document code {
+  color: var(--acid);
+  font-family: var(--font-code);
+  font-size: 0.9em;
+}
 .page-hero.not-found {
   min-height: 100vh;
   display: flex;
@@ -526,6 +569,7 @@ h1 span,
   align-items: flex-start;
   justify-content: center;
   padding: 48px 0;
+  border-bottom: 0;
 }
 .not-found .page-intro {
   margin-bottom: 35px;
