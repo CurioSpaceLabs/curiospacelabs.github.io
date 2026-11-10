@@ -492,6 +492,14 @@ h1 span,
   font-size: 10px;
   white-space: nowrap;
 }
+.project-link-disabled {
+  cursor: not-allowed;
+}
+.project-link-disabled span,
+.project-link-disabled:hover span {
+  transform: none;
+  transition: none;
+}
 .manifesto {
   padding: 115px 0 120px;
   text-align: center;

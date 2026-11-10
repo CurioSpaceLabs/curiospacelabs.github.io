@@ -1,3 +1,4 @@
+import indonesianCopyText from "./translations/id.json";
 import "./style.css";
 
 const visualTypes = [
@@ -78,7 +79,7 @@ const projects = [
     description:
       "Computer Access Protection through Triggered Camera & Human Analysis.",
     tags: ["Python", "Security", "Work in progress"],
-    url: "",
+    url: "https://github.com/CurioSpaceLabs/CAPTCHA",
   },
   {
     id: "project3",
@@ -153,6 +154,21 @@ const page =
 document.querySelector('link[rel="canonical"]').href =
   `https://curiospacelabs.github.io${path === "/" ? "/" : path}`;
 
+const indonesianCopy = indonesianCopyText;
+const translateCopy = (value) => {
+  if (typeof value === "string") {
+    return indonesianCopy[value] ?? value;
+  }
+  if (Array.isArray(value)) {
+    return value.map(translateCopy);
+  }
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, text]) => [key, translateCopy(text)]),
+    );
+  }
+  return value;
+};
 const copy = {
   en: {
     language: "Language",
@@ -239,92 +255,8 @@ const copy = {
       other: ["The wider archive", "The rest of the experiments, utilities, and curiosities in the lab.", ["GitHub", "Archive", "Other"]],
     },
   },
-  id: {
-    language: "Bahasa",
-    languageLabel: "Pilih bahasa",
-    nav: { home: "Beranda", projects: "Proyek", about: "Tentang", hello: "Sapa kami" },
-    menuOpen: "Buka menu navigasi",
-    menuClose: "Tutup menu navigasi",
-    view: "Lihat",
-    privacy: "Pemberitahuan Privasi",
-    footer: {
-      title: "Mari membangun<br /><span>sesuatu yang berdampak.</span>",
-      contact: "Mulai percakapan",
-      email: "Email",
-      values: "Rasa ingin tahu · Kreativitas · Kemajuan · Dampak",
-    },
-    home: {
-      eyebrow: "Rasa ingin tahu / Kreativitas / Kemajuan / Dampak",
-      title: "Membangun software<br /><span>yang berawal dari rasa ingin tahu</span>",
-      intro:
-        "CurioSpace Labs adalah studio software independen yang ingin menghadirkan dampak nyata melalui rasa ingin tahu dan kreativitas.",
-      projects: "Lihat proyek",
-      what: "Yang kami lakukan",
-      description:
-        "Kami membuat aplikasi desktop, proyek web, bot Discord, serta eksperimen bermanfaat atau seru dari awal—yang terpenting, semuanya membawa kebaikan bagi banyak orang.",
-      about: "Tentang kami",
-      selected: "Karya pilihan",
-      allProjects: "Lihat semua proyek",
-      philosophy: "Filosofi kami",
-      quote:
-        "Apa pun juga yang kamu perbuat, perbuatlah dengan segenap hatimu seperti untuk Tuhan dan bukan untuk manusia.",
-      verse: "Kolose 3:23",
-    },
-    projects: {
-      eyebrow: "Arsip",
-      title: "Karya<br /><span>kami.</span>",
-      intro:
-        "Aplikasi desktop, proyek web, bot Discord, dan eksperimen yang kami bangun dari awal dan publikasikan agar berdampak.",
-      count: "07 proyek",
-      sorted: "Diurutkan:",
-      order: "terbaru",
-    },
-    about: {
-      eyebrow: "Tentang lab / Sejak 2025",
-      title: "Sedikit tentang<br /><span>CurioSpace<br />Labs.</span>",
-      intro:
-        "CurioSpace Labs adalah studio software independen yang ingin menghadirkan dampak nyata melalui rasa ingin tahu dan kreativitas. (Sebelumnya bernama CtrlAltSpace Productions.)",
-      us: "Tentang kami",
-      stamp: "halo!",
-      paragraphs: [
-        "CurioSpace Labs adalah studio independen yang saat ini dijalankan oleh seorang pelajar, dengan proyek-proyek yang berangkat dari rasa ingin tahu dan kreativitas.",
-        "Kami senang membuat hal-hal yang unik dan menyenangkan, sambil memastikan setiap karya tetap membawa dampak. Kami berkarya karena kesenangan dan untuk orang-orang di sekitar kami, sebab software lebih bermakna saat memberi sesuatu kembali kepada lingkungannya.",
-        "Kami percaya rasa ingin tahu adalah titik awal terbaik untuk setiap proyek. Hasilnya mungkin belum sempurna, tetapi kita perlu berani mengambil risiko. Tanpanya, setiap proyek lama-lama akan terasa serupa.",
-        "Kreativitas juga penting. Kreativitas membuat proyek menjadi lebih baik, unik, dan orisinal. Kami membebaskan pikiran dan membuat apa pun yang ingin kami buat—itulah yang menggerakkan kami.",
-        "Setiap proyek dimulai dari awal. Kami merencanakan dengan rasa ingin tahu, menggunakan alat AI saat membantu menghadapi tantangan baru, dan terus belajar sambil membangun, memperbaiki bug, serta merilis karya.",
-      ],
-      principlesTitle: [
-        "Utamakan rasa ingin tahu",
-        "Berkreasi dalam pengembangan",
-        "Ciptakan dampak",
-        "Terus berkembang",
-      ],
-      principlesText: [
-        "Setiap eksperimen yang bermanfaat berawal dari pertanyaan.",
-        "Kreativitas membuat proyek menjadi unik dan berdampak.",
-        "Bahkan proyek yang konyol pun sebaiknya memberi sesuatu.",
-        "Mulai dari hal kecil, belajar secara terbuka, dan terus berkarya.",
-      ],
-      toolkit: "Peralatan kami",
-      languages: "Bahasa pemrograman",
-      technologies: "Teknologi & pustaka",
-      tools: "Alat & platform",
-      ctaEyebrow: "Mari menjelajah",
-      ctaTitle: "Mari membangun sesuatu bersama.",
-      ctaButton: "Sapa kami",
-    },
-    projectInfo: {
-      gem: ["Pendamping Discord", "Asisten AI untuk bertukar ide, mencari jawaban, dan membuat percakapan di Discord lebih lancar.", ["Discord", "AI", "Aktif"]],
-      captcha: ["Akses komputer", "Perlindungan akses komputer melalui kamera pemicu dan analisis manusia.", ["Python", "Keamanan", "Dalam pengembangan"]],
-      project3: ["Visi komputer", "Mendeteksi, melacak, dan menganalisis orang secara langsung, bahkan di tempat ramai dengan satu kamera.", ["Keselamatan", "Keamanan", "Dalam pengembangan"]],
-      verid: ["---", "Sistem verifikasi identitas yang terstandarisasi.", ["Verifikasi", "Demo mendatang"]],
-      serene: ["Chatbot AI", "Chatbot AI yang berfokus pada kesehatan mental dan keselamatan.", ["AI", "Kesehatan", "Keselamatan", "Direncanakan"]],
-      project6: ["Media sosial", "---", ["Sosial", "Gaya hidup", "Dalam perencanaan"]],
-      project7: ["Tutor belajar", "---", ["Pendidikan", "AI", "Gratis", "Dalam perencanaan"]],
-      other: ["Arsip lainnya", "Kumpulan eksperimen, utilitas, dan hal menarik lainnya dari lab.", ["GitHub", "Arsip", "Lainnya"]],
-    },
-  },
 };
+copy.id = translateCopy(copy.en);
 
 const getSavedLanguage = () => {
   try {
@@ -342,6 +274,9 @@ const projectCard = (project, compact = false) => {
   const safeProject = ensureProjectVisual({ ...project });
   const [type, description, tags] = copy[language].projectInfo[project.id];
   const useLogoFallback = safeProject.logo && !safeProject.image;
+  const projectLink = safeProject.url
+    ? `<a class="text-link" href="${safeProject.url}" target="_blank" rel="noreferrer">${copy[language].view} ${arrow}</a>`
+    : `<span class="text-link project-link-disabled" aria-disabled="true">${copy[language].view} ${arrow}</span>`;
   const visualMarkup = safeProject.image
     ? `<div class="project-visual project-visual--image"><img src="${safeProject.image}" alt="${safeProject.name} preview" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-star').style.opacity='1';" /><span class="visual-mark asset-mark"><span class="fallback-star">✳</span></span></div>`
     : `<div class="project-visual ${safeProject.visual}"><span class="visual-index">${safeProject.number}</span>${useLogoFallback ? `<span class="visual-mark asset-mark"><img src="${safeProject.logo}" alt="${safeProject.name} logo" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-star').style.opacity='1';" /><span class="fallback-star">✳</span></span>` : `<span class="visual-mark asset-mark visual-mark--fallback"><span class="fallback-star">✳</span></span>`}<div class="visual-lines"></div></div>`;
@@ -349,7 +284,7 @@ const projectCard = (project, compact = false) => {
   return `
     <article class="project-card ${compact ? "project-card--compact" : ""}">
       ${visualMarkup}
-      <div class="project-info"><div><p class="eyebrow">${type}</p><h3>${safeProject.name}</h3></div><p class="project-description">${description}</p><div class="project-footer"><div class="tag-list">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div><a class="text-link" href="${safeProject.url}" target="_blank" rel="noreferrer">${copy[language].view} ${arrow}</a></div></div>
+      <div class="project-info"><div><p class="eyebrow">${type}</p><h3>${safeProject.name}</h3></div><p class="project-description">${description}</p><div class="project-footer"><div class="tag-list">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div>${projectLink}</div></div>
     </article>`;
 };
 
