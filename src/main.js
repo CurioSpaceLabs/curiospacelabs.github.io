@@ -78,7 +78,7 @@ const projects = [
     type: "Access monitoring",
     description:
       "Computer Protection, Tracking & Camera-based Human Analysis",
-    tags: ["Python", "Security", "Auditing", "Access control", "Work in progress"],
+    tags: ["Python", "Monitoring", "Auditing", "Access control", "Work in progress"],
     url: "https://github.com/CurioSpaceLabs/CAPTCHA",
   },
   {
