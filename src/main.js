@@ -245,9 +245,9 @@ const copy = {
       ctaButton: "Say hello",
     },
     projectInfo: {
-      gem: ["Discord companion", "An AI assistant for brainstorming, answers, and smoother Discord conversations.", ["Discord", "AI", "Live"]],
-      captcha: ["Computer access", "Computer Access Protection through Triggered Camera & Human Analysis.", ["Python", "Security", "Work in progress"]],
-      project3: ["Computer vision", "Detects, tracks, and analyzes people in real-time even on crowded spaces and only one camera feed.", ["Safety", "Security", "Under development"]],
+      gem: ["Discord bot", "An AI assistant for brainstorming, answers, and smoother Discord conversations.", ["Discord", "AI", "Live"]],
+      captcha: ["Acess monitoring", "Computer Access Protection through Triggered Camera & Human Analysis.", ["Python", "Monitoring", "Auditing", "Access control", "Work in progress"]],
+      project3: ["Crowd control", "Detects, tracks, and analyzes people in real-time even on crowded spaces and only one camera feed.", ["Safety", "Security", "Under development"]],
       verid: ["---", "A standardized identity verification system.", ["Verification", "Upcoming demo"]],
       serene: ["AI chatbot", "An AI chatbot focused on mental health and safety.", ["AI", "Health", "Safety", "Planned"]],
       project6: ["Social media", "---", ["Social", "Lifestyle", "Under planning"]],
