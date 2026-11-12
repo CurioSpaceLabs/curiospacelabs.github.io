@@ -241,7 +241,7 @@ const copy = {
       technologies: "Technologies & libraries",
       tools: "Tools & platforms",
       ctaEyebrow: "Let’s explore",
-      ctaTitle: "Let's build something together.",
+      ctaTitle: "Let’s build something together.",
       ctaButton: "Say hello",
     },
     projectInfo: {
