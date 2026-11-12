@@ -55,7 +55,7 @@ const projects = [
     id: "gem",
     number: "00",
     name: "Gem",
-    type: "Discord companion",
+    type: "Discord bot",
     description:
       "An AI assistant for brainstorming, answers, and smoother Discord conversations.",
     tags: ["Discord", "AI", "Live"],
@@ -75,17 +75,17 @@ const projects = [
     id: "captcha",
     number: "01",
     name: "C.A.P.T.C.H.A.",
-    type: "Computer access",
+    type: "Access monitoring",
     description:
-      "Computer Access Protection through Triggered Camera & Human Analysis.",
-    tags: ["Python", "Security", "Work in progress"],
+      "Computer Protection, Tracking & Camera-based Human Analysis",
+    tags: ["Python", "Security", "Auditing", "Access control", "Work in progress"],
     url: "https://github.com/CurioSpaceLabs/CAPTCHA",
   },
   {
     id: "project3",
     number: "02",
     name: "Project 3",
-    type: "Computer vision",
+    type: "Crowd control",
     description:
       "Detects, tracks, and analyzes people in real-time even on crowded spaces and only one camera feed.",
     tags: ["Safety", "Security", "Under development"],
